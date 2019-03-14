@@ -7,7 +7,7 @@ module.exports = {
   copyright: '© 2019 All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-135308681-2',
   menu: [
     {
       label: 'Articles',
@@ -17,6 +17,10 @@ module.exports = {
       label: 'About me',
       path: '/pages/about'
     }
+    ,{
+      label: 'Resume',
+      path: 'https://resume.randleunger.com'
+    }
     // ,{
     //   label: 'Contact me',
     //   path: '/pages/contacts'
@@ -25,7 +29,7 @@ module.exports = {
   author: {
     name: 'Randle Unger',
     photo: '/randyunger.png',
-    bio: 'Developer, Product Manager, Marketer',
+    bio: 'Software Developer, Product Manager, Marketer',
     contacts: {
       github: 'randyunger',
       email: 'randy.unger@gmail.com',
