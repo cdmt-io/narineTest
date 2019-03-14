@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 
-const FlexLink = ({ children, to, ...others }) => {
+const FlexLink = ({ children, to, activeClassName, ...others }) => {
   const isBlogLink = /^\/blog(\/)?/.test(to);
   if (isBlogLink) {
     return (
@@ -14,7 +14,7 @@ const FlexLink = ({ children, to, ...others }) => {
   const isInternalLink = /^\/(?!\/)/.test(to);
   if (isInternalLink) {
     return (
-      <GatsbyLink to={to} {...others}>
+      <GatsbyLink to={to} activeClassName={activeClassName} {...others}>
         {children}
       </GatsbyLink>
     );
