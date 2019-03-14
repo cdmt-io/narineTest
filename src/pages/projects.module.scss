@@ -1,0 +1,12 @@
+@import '../assets/scss/variables';
+@import '../assets/scss/mixins';
+
+.projectTile {
+  float: left;
+  margin: 20px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: -13px 11px 25px 1px rgba(0,0,0,0.55);
+}
