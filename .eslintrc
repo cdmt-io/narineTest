@@ -17,6 +17,7 @@
         "graphql": true
     },
     "rules": {
+      "spaced-comment": "off",
       "comma-spacing": "off",
       "comma-style": "off",
       "comma-dangle": "off",

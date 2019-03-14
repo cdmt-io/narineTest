@@ -11,7 +11,7 @@ module.exports = {
   menu: [
     {
       label: 'Articles',
-      path: '/'
+      path: '/articles'
     },
     {
       label: 'About me',
@@ -29,7 +29,7 @@ module.exports = {
   author: {
     name: 'Randle Unger',
     photo: '/randyunger.png',
-    bio: 'Software Developer, Product Manager, Marketer',
+    bio: 'Software Developer, Product Manager, Marketer. Technology enthusiast.',
     contacts: {
       github: 'randyunger',
       email: 'randy.unger@gmail.com',

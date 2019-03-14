@@ -2,9 +2,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
+import Feed from '../components/Feed';
 import Page from '../components/Page';
+import Pagination from '../components/Pagination';
 
-const IndexTemplate = ({ data, pageContext }) => {
+const IndexTemplateWithArticles = ({ data, pageContext }) => {
   const {
     title: siteTitle,
     subtitle: siteSubtitle
@@ -18,20 +20,29 @@ const IndexTemplate = ({ data, pageContext }) => {
     nextPagePath
   } = pageContext;
 
+  const { edges } = data.allMarkdownRemark;
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
       <Sidebar isIndex />
       <Page>
-        <h1>Hello World</h1>
+        <Feed edges={edges} />
+        <Pagination
+          prevPagePath={prevPagePath}
+          nextPagePath={nextPagePath}
+          hasPrevPage={hasPrevPage}
+          hasNextPage={hasNextPage}
+        />
       </Page>
     </Layout>
   );
 };
 
+//query IndexTemplateWithArticles($postsLimit: Int!, $postsOffset: Int!) {
+
 export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  query IndexTemplateWithArticles {
     site {
       siteMetadata {
         title
@@ -39,8 +50,8 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
+        limit: 9999,
+        skip: 0,
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
         sort: { order: DESC, fields: [frontmatter___date] }
       ){
@@ -62,4 +73,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexTemplate;
+export default IndexTemplateWithArticles;
