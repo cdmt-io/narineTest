@@ -5,4 +5,4 @@ npm-debug.log
 .eslintcache
 .gatsby-context.js
 .idea
-*.iml
+gatsby-starter-lumen.iml
