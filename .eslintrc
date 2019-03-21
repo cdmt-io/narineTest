@@ -13,10 +13,12 @@
         "jsx-a11y",
         "import"
     ],
+  //
     "globals": {
         "graphql": true
     },
     "rules": {
+      "object-curly-newline": "off",
       "quote-props": "off",
       "semi": "off",
       "spaced-comment": "off",
@@ -55,14 +57,14 @@
       "no-use-before-define": 0,
       "eol-last": 0,
       "no-shadow": 0,
-//      "quotes": [
-//        2,
-//        "single"
-//      ],
-//      "jsx-quotes": [
-//        0,
-//        "prefer-single"
-//      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "jsx-quotes": [
+        0,
+        "prefer-single"
+      ],
       "react/jsx-no-undef": 1,
       "react/jsx-uses-react": 1,
       "react/jsx-uses-vars": 1
