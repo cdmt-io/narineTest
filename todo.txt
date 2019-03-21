@@ -1,0 +1,7 @@
+# Todos
+
+- Incorrect link styling for /, selects "Articles" in Menu/Links
+- Projects
+- Copyright should move to bottom when small viewport
+- Terminal window / react
+- Hotjar

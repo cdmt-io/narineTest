@@ -3,13 +3,16 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
-    subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    url: 'https://randleunger.com',
+    title: 'Randy Unger - Personal Site',
+    subtitle: 'Projects, resume, about me',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
+      {
+        label: 'Projects',
+        path: '/projects',
+      },
       {
         label: 'Articles',
         path: '/',
@@ -19,18 +22,23 @@ module.exports = {
         path: '/about/',
       },
       {
+        label: 'Resume',
+        path: 'https://resume.randleunger.com',
+      },
+      {
         label: 'Contact me',
         path: '/contact/',
       },
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
+      name: 'Randle Unger',
+      email: 'randy.unger@gmail.com',
       telegram: '#',
-      twitter: '#',
-      github: '#',
+      twitter: '',
+      github: 'randyunger',
       rss: '#',
       vk: '#',
+      bio: 'Developer, Product Manager, Marketer. Technology enthusiast.',
     },
   },
   plugins: [
@@ -121,7 +129,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-73379983-2' },
+      options: { trackingId: 'UA-135308681-2' },
     },
     {
       resolve: 'gatsby-plugin-google-fonts',

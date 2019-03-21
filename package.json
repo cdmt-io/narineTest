@@ -4,16 +4,17 @@
   "description": "Simple starter for Gatsby",
   "main": "n/a",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "yarn $NODE_DEBUG_OPTION run clean && gatsby develop",
     "build": "gatsby build",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
     "lint": "./node_modules/.bin/eslint --cache --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write './*.js' 'src/**/*.js' 'src/**/*.jsx'",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy-gahhhh": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "s3-deploy './public/**' --cwd './public/' --region us-east-1 --bucket randleunger.com --invalidate"
   },
-  "repository": "git+https://github.com/alxshelepenok/gatsby-starter-lumen.git",
+  "repository": "git+https://github.com/alxshelepenok/gatsby-v2-starter-lumen.git",
   "keywords": [
     "gatsby",
     "blog",

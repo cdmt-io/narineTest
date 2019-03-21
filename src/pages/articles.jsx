@@ -5,9 +5,14 @@ import Layout from '../components/Layout'
 import Post from '../components/Post'
 import Sidebar from '../components/Sidebar'
 
-class IndexRoute extends React.Component {
+class ArticlesRoute extends React.Component {
   render() {
+    const items = []
     const { title, subtitle } = this.props.data.site.siteMetadata
+    const posts = this.props.data.allMarkdownRemark.edges
+    posts.forEach(post => {
+      items.push(<Post data={post} key={post.node.fields.slug} />)
+    })
 
     return (
       <Layout>
@@ -18,7 +23,7 @@ class IndexRoute extends React.Component {
           </Helmet>
           <Sidebar {...this.props} />
           <div className="content">
-            <h1>Hello World</h1>
+            <div className="content__inner">{items}</div>
           </div>
         </div>
       </Layout>
@@ -26,10 +31,10 @@ class IndexRoute extends React.Component {
   }
 }
 
-export default IndexRoute
+export default ArticlesRoute
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query ArticlesQuery {
     site {
       siteMetadata {
         title
@@ -47,6 +52,26 @@ export const pageQuery = graphql`
           github
           rss
           vk
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 1000
+      filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            categorySlug
+          }
+          frontmatter {
+            title
+            date
+            category
+            description
+          }
         }
       }
     }
