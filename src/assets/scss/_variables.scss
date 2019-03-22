@@ -1,4 +1,4 @@
-/** 
+/**
  * Variables
  */
 
@@ -20,6 +20,8 @@ $typographic-base-font-size: 16px;
 $typographic-small-font-size: 14px;
 
 $typographic-base-line-height: 1.625;
+//1.625 line height adds a blank line at the bottom
+//$typographic-base-line-height: 1;
 
 $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;

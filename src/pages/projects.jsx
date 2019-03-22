@@ -1,12 +1,11 @@
 import React from 'react'
-import styles from './projects.module.scss';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 
 const ProjectTile = ({ children, name, link, ...others }) => {
   return (
     <a href={link}>
-      <div className={styles['projectTile']}>
+      <div className='projectTile floating'>
         <h3>{name}</h3>
         {children}
       </div>
