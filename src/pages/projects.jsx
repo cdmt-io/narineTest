@@ -14,7 +14,7 @@ const ProjectTile = ({ children, name, link, ...others }) => {
   )
 }
 
-class ArticlesRoute extends React.Component {
+class ProjectsRoute extends React.Component {
   render() {
     return (
       <Layout title="Projects" description="Projects I've worked on">
@@ -32,7 +32,7 @@ class ArticlesRoute extends React.Component {
   }
 }
 
-export default ArticlesRoute
+export default ProjectsRoute
 
 export const pageQuery = graphql`
   query ProjectsQuery {

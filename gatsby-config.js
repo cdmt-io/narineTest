@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://randleunger.com',
     title: 'Randy Unger - Personal Site',
-    subtitle: 'Projects, resume, about me',
+    subtitle: 'Developer, Product Manager, Marketer. Technology enthusiast.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         label: 'Articles',
-        path: '/',
+        path: '/articles',
       },
       {
         label: 'About me',
