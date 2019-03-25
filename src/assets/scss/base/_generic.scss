@@ -147,23 +147,20 @@ figcaption {
 }
 
 .content {
+    @include floating;
+
     &__inner {
         padding: 25px 20px;
     }
 }
 
-.floating {
-    margin: 20px;
-    padding: 5px;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    box-shadow: -13px 11px 25px 1px rgba(0,0,0,0.55);
+.clearSidebar {
+    margin-left: 300px;
 }
 
 .projectTile {
-    float: left;
-    width: 200px;
-    background-color: white;
+    @include floating;
+    @include tile;
 }
 
 @include breakpoint-sm {

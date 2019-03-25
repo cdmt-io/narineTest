@@ -4,3 +4,21 @@
 @import "mixins/margin";
 @import "mixins/padding";
 @import "mixins/line-height";
+
+@import "./_variables";
+
+
+@mixin floating {
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: $color-tile;
+  box-shadow: -13px 11px 25px 1px rgba(0,0,0,0.55);
+}
+
+@mixin tile {
+  float: left;
+  width: 200px;
+  background-color: $color-tile;
+}

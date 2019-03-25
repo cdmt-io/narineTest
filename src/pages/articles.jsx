@@ -22,7 +22,7 @@ class ArticlesRoute extends React.Component {
             <meta name="description" content={subtitle} />
           </Helmet>
           <Sidebar {...this.props} />
-          <div className="content">
+          <div className="content clearSidebar">
             <div className="content__inner">{items}</div>
           </div>
         </div>

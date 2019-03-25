@@ -7,7 +7,7 @@ class Layout extends React.Component {
   render() {
     const { children } = this.props
     const doodleStyle = {
-      position: 'absolute',
+      position: 'fixed',
       height: '100%',
       width: '100%',
       zIndex: "-99999999",
@@ -15,15 +15,16 @@ class Layout extends React.Component {
 
     return (
       <div id="toppest">
-        <Doodle grid="6" style={doodleStyle} rule={`
+        <Doodle style={doodleStyle} rule={`
             :doodle {
+              @grid: 6x6
               @size: 20em;
               grid-gap: 15px;
             }
 
             transition: all .4s ease;
-            border-top: 1px solid hsl(@rand(137.50deg, 360deg), 80%, 80%);
-            border-right: 1px solid hsl(@rand(137.50deg, 360deg), 80%, 80%);
+            border-top: 1px solid hsl(@rand(137.50deg, 360deg), 60%, 60%);
+            border-right: 1px solid hsl(@rand(137.50deg, 360deg), 60%, 60%);
 
             :after {
               content: \\@hex(@rand(9632, 9687));
@@ -33,8 +34,8 @@ class Layout extends React.Component {
             @random {
               border-top: 1px solid transparent;
               border-right: 1px solid transparent;
-              border-bottom: 1px solid hsl(@rand(137.50deg, 360deg), 80%, 80%);
-              border-left: 1px solid hsl(@rand(137.50deg, 360deg), 80%, 80%);
+              border-bottom: 1px solid hsl(@rand(137.50deg, 360deg), 60%, 60%);
+              border-left: 1px solid hsl(@rand(137.50deg, 360deg), 60%, 60%);
               border-style: dashed;
             }
 
